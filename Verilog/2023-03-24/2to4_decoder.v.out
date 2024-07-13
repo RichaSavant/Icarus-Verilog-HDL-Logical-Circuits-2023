@@ -1,0 +1,93 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002a4eec16850 .scope module, "decoder2to4_gl_tb" "decoder2to4_gl_tb" 2 13;
+ .timescale 0 0;
+v000002a4eea86790_0 .var "en", 0 0;
+v000002a4eec134d0_0 .var "i0", 0 0;
+v000002a4eec13570_0 .var "i1", 0 0;
+v000002a4eec12df0_0 .net "y0", 0 0, L_000002a4eea8a340;  1 drivers
+v000002a4eec12f30_0 .net "y1", 0 0, L_000002a4eea8a3b0;  1 drivers
+v000002a4eec12710_0 .net "y2", 0 0, L_000002a4eea8a420;  1 drivers
+v000002a4eec12b70_0 .net "y3", 0 0, L_000002a4eea8a490;  1 drivers
+S_000002a4eec169e0 .scope module, "d1" "decoder2to4_gl" 2 16, 2 1 0, S_000002a4eec16850;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i0";
+    .port_info 1 /INPUT 1 "i1";
+    .port_info 2 /INPUT 1 "en";
+    .port_info 3 /OUTPUT 1 "y0";
+    .port_info 4 /OUTPUT 1 "y1";
+    .port_info 5 /OUTPUT 1 "y2";
+    .port_info 6 /OUTPUT 1 "y3";
+L_000002a4eea86830 .functor NOT 1, v000002a4eec134d0_0, C4<0>, C4<0>, C4<0>;
+L_000002a4eea8a2d0 .functor NOT 1, v000002a4eec13570_0, C4<0>, C4<0>, C4<0>;
+L_000002a4eea8a340 .functor AND 1, L_000002a4eea86830, L_000002a4eea8a2d0, v000002a4eea86790_0, C4<1>;
+L_000002a4eea8a3b0 .functor AND 1, L_000002a4eea86830, v000002a4eec13570_0, v000002a4eea86790_0, C4<1>;
+L_000002a4eea8a420 .functor AND 1, v000002a4eec134d0_0, L_000002a4eea8a2d0, v000002a4eea86790_0, C4<1>;
+L_000002a4eea8a490 .functor AND 1, v000002a4eec134d0_0, v000002a4eec13570_0, v000002a4eea86790_0, C4<1>;
+v000002a4eea86470_0 .net "en", 0 0, v000002a4eea86790_0;  1 drivers
+v000002a4eea8bd10_0 .net "i0", 0 0, v000002a4eec134d0_0;  1 drivers
+v000002a4eea8bdb0_0 .net "i0bar", 0 0, L_000002a4eea86830;  1 drivers
+v000002a4eea8be50_0 .net "i1", 0 0, v000002a4eec13570_0;  1 drivers
+v000002a4eea8bef0_0 .net "i1bar", 0 0, L_000002a4eea8a2d0;  1 drivers
+v000002a4eea86510_0 .net "y0", 0 0, L_000002a4eea8a340;  alias, 1 drivers
+v000002a4eea865b0_0 .net "y1", 0 0, L_000002a4eea8a3b0;  alias, 1 drivers
+v000002a4eea86650_0 .net "y2", 0 0, L_000002a4eea8a420;  alias, 1 drivers
+v000002a4eea866f0_0 .net "y3", 0 0, L_000002a4eea8a490;  alias, 1 drivers
+    .scope S_000002a4eec16850;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002a4eec134d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002a4eec13570_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002a4eea86790_0, 0, 1;
+    %vpi_call 2 20 "$monitor", "Time:%f, en=%b, i0=%b, i1=%b, y0=%b, y1=%b, y2=%b, y3=%b", $time, v000002a4eea86790_0, v000002a4eec134d0_0, v000002a4eec13570_0, v000002a4eec12df0_0, v000002a4eec12f30_0, v000002a4eec12710_0, v000002a4eec12b70_0 {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eea86790_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002a4eec134d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002a4eec13570_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eea86790_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002a4eec134d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eec13570_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eea86790_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eec134d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002a4eec13570_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eea86790_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eec134d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eec13570_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002a4eea86790_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eec134d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002a4eec13570_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "2to4_decoder.v";

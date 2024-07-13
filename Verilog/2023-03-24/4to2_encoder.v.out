@@ -1,0 +1,56 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000289fd7aaa60 .scope module, "encoder4to2_dl_tb" "encoder4to2_dl_tb" 2 8;
+ .timescale 0 0;
+v00000289fd9798e0_0 .var "i", 3 0;
+v00000289fd979980_0 .net "y", 1 0, L_00000289fd979b60;  1 drivers
+S_00000289fd9353d0 .scope module, "e1" "encoder4to2_dl" 2 11, 2 1 0, S_00000289fd7aaa60;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "i";
+    .port_info 1 /OUTPUT 2 "y";
+L_00000289fd9357e0 .functor OR 1, L_00000289fd979a20, L_00000289fd979ac0, C4<0>, C4<0>;
+L_00000289fd7a6d00 .functor OR 1, L_00000289fd979c00, L_00000289fd979ca0, C4<0>, C4<0>;
+v00000289fd7ae890_0 .net *"_ivl_12", 0 0, L_00000289fd979c00;  1 drivers
+v00000289fd7a6850_0 .net *"_ivl_14", 0 0, L_00000289fd979ca0;  1 drivers
+v00000289fd7abec0_0 .net *"_ivl_15", 0 0, L_00000289fd7a6d00;  1 drivers
+v00000289fd935560_0 .net *"_ivl_3", 0 0, L_00000289fd979a20;  1 drivers
+v00000289fd935600_0 .net *"_ivl_5", 0 0, L_00000289fd979ac0;  1 drivers
+v00000289fd9356a0_0 .net *"_ivl_6", 0 0, L_00000289fd9357e0;  1 drivers
+v00000289fd935740_0 .net "i", 3 0, v00000289fd9798e0_0;  1 drivers
+v00000289fd979840_0 .net "y", 1 0, L_00000289fd979b60;  alias, 1 drivers
+L_00000289fd979a20 .part v00000289fd9798e0_0, 1, 1;
+L_00000289fd979ac0 .part v00000289fd9798e0_0, 3, 1;
+L_00000289fd979b60 .concat8 [ 1 1 0 0], L_00000289fd9357e0, L_00000289fd7a6d00;
+L_00000289fd979c00 .part v00000289fd9798e0_0, 2, 1;
+L_00000289fd979ca0 .part v00000289fd9798e0_0, 3, 1;
+    .scope S_00000289fd7aaa60;
+T_0 ;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v00000289fd9798e0_0, 0, 4;
+    %vpi_call 2 15 "$monitor", "Time:%f, i=%4b, y=%2b", $time, v00000289fd9798e0_0, v00000289fd979980_0 {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v00000289fd9798e0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v00000289fd9798e0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v00000289fd9798e0_0, 0, 4;
+    %delay 5, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v00000289fd9798e0_0, 0, 4;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "4to2_encoder.v";
