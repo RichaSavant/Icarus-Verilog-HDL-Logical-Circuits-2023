@@ -22,11 +22,5 @@ This repository focuses on designing and simulating logical circuits using Veril
    - Implementation of various types of shift registers (serial-in serial-out, serial-in parallel-out, etc.).
    - Design of different counters (binary, BCD, up/down) with corresponding simulation files.
 
-6. **Icarus Verilog Integration**:
-   - Instructions and scripts for running Verilog simulations using Icarus Verilog.
-   - Examples demonstrating how to compile and simulate Verilog code with Icarus Verilog, including viewing waveform outputs using tools like GTKWave.
-
 ### Objective and Impact:
-The primary objective of this repository is to serve as a comprehensive resource for students, educators, and hobbyists interested in digital design and Verilog HDL. By providing well-documented examples and testbenches, the repository aims to enhance understanding of digital circuits and the practical application of HDL in circuit design and simulation.
-
-This project is valuable for learning and teaching purposes, offering hands-on experience in designing, coding, and simulating a wide range of logical circuits. It also provides a strong foundation for more advanced digital design projects and encourages the exploration of complex digital systems using Verilog HDL.
+The primary objective of this repository is to enhance understanding of digital circuits and the practical application of HDL in circuit design and simulation. It also provides a strong foundation for more advanced digital design projects and encourages the exploration of complex digital systems using Verilog HDL.
